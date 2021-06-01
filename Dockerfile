@@ -1,20 +1,22 @@
 FROM python:2.7-alpine
-RUN apk update && \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories &&\
+    apk update && \
     apk add python python-dev linux-headers libffi-dev gcc make musl-dev py-pip mysql-client git openssl-dev
 RUN adduser -D -u 1001 -s /bin/bash ctfd
 
 WORKDIR /opt/CTFd
 RUN mkdir -p /opt/CTFd /var/log/CTFd /var/uploads
-
+RUN pip config set global.index-url https://pypi.doubanio.com/simple
+RUN pip config set install.trusted-host pypi.doubanio.com
 COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i  https://pypi.doubanio.com/simple
 
 COPY . /opt/CTFd
 
 RUN for d in CTFd/plugins/*; do \
       if [ -f "$d/requirements.txt" ]; then \
-        pip install -r $d/requirements.txt; \
+        pip install -r $d/requirements.txt -i  https://pypi.doubanio.com/simple; \
       fi; \
     done;
 

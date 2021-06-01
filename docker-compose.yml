@@ -1,4 +1,4 @@
-version: '2'
+version: '2.2'
 
 services:
   ctfd:
@@ -6,7 +6,7 @@ services:
     user: root
     restart: always
     ports:
-      - "8000:8000"
+      - "8001:8000"
     environment:
       - UPLOAD_FOLDER=/var/uploads
       - DATABASE_URL=mysql+pymysql://root:ctfd@db/ctfd
@@ -19,6 +19,7 @@ services:
       - .data/CTFd/logs:/var/log/CTFd
       - .data/CTFd/uploads:/var/uploads
       - .:/opt/CTFd:ro
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - db
     networks:
@@ -26,7 +27,7 @@ services:
         internal:
 
   db:
-    image: mariadb:10.4
+    image: mariadb:10.4.12
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=ctfd
@@ -50,5 +51,7 @@ services:
 
 networks:
     default:
+        external:
+          name: frpcadmin
     internal:
         internal: true
