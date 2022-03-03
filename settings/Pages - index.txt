@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" href="/themes/core/static/css/new.css">
+</head>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <!-- <img class="w-100 mx-auto d-block" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="themes/core/static/img/ssslogo.png" /> -->
+        <div class="logo text-center" style="font-family: 'Zhanghaishan'; font-size: 75px; user-select:none; padding-bottom: 50px; padding-top: 14vh;">螺丝工作室</div>
+        <h3 class="text-center">
+            <p style="font-family:Segoe Script; user-select:none">Code and Hack, Capture the Flag</p>
+        </h3>
+        <h4 class="text-center">
+            <p style="user-select:none">flag{Welcome_to_SSSCTF}</p>
+            <!-- flag{We1c0m3_t0_S5SCTF} -->
+        </h4>
+	</div>
+</div>

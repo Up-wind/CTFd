@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'FantasqueSansMonoRegular';
+        src: url('/themes/core/static/fonts/FantasqueSansMonoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'FantasqueSansMonoBold';
+        src: url('/themes/core/static/fonts/FantasqueSansMonoBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AnitaSemisquareNormal';
+        src: url('/themes/core/static/fonts/AnitaSemisquareNormal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+code, pre, h1, h2, h3, #submission-input {
+  font-family: 'FantasqueSansMonoRegular', "Raleway";
+}
+
+h3 {
+   font-family: 'AnitaSemisquareNormal';
+   font-weight: normal;
+   font-style: normal;
+}
+
+.bg-dark {
+  background-color: #006fce !important;
+  background:url("/themes/core/static/img/back_blue.jpg");
+  filter:saturate(130%);
+}
+
+.jumbotron {
+  background: url(/themes/core/static/img/halfbg.png);
+  height: 300px;
+}
+
+.jumbotron h1 {
+  margin-top: 2rem;
+  font-family: 'FantasqueSansMonoBold', monospace;
+}
+
+html, body, main {
+  background-color: #ffffff !important;
+  background-size: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.modal-content {
+  background-color: #ffffff;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: #45629d;
+  color: rgb(255, 255, 255);
+}
+
+.btn{
+  line-height: 25px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #45629d;
+    border-color: #45629d;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #45629da1;
+    border-color: #45629d00;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #45629d;
+    border-color: #45629d;
+}
+
+.btn-info {
+    background-color: #45629d !important;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #45629d;
+  border: none;
+}
+
+.btn-dark:hover {
+/*  border-color: #6666997d;*/
+  color: #fff;
+  background-color: #45629da1;
+  border: none;
+}
+
+.challenge-button {
+  box-shadow: 0 0 0  #006fce;
+}
+
+.solved-challenge {
+    background-color: #70a998 !important;
+    opacity: 1;
+    border: none;
+}

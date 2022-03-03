@@ -34,8 +34,8 @@
 		var script_root = "{{ request.script_root }}";
 		var csrf_nonce = "{{ nonce }}";
 		var user_mode = "{{ get_config('user_mode') }}";
-		var ctf_start = {{ get_config("start") | tojson }};
-		var ctf_end = {{ get_config("end") | tojson }};
+		var ctf_start = "{{ get_config('start') | tojson }}";
+		var ctf_end = "{{ get_config('end') | tojson }}";
 		CTFd.options.urlRoot = script_root;
 		CTFd.options.csrfNonce = csrf_nonce;
 		CTFd.options.start = ctf_start;
@@ -140,9 +140,9 @@
 	</main>
 
 	<footer class="footer">
-		<div class="container text-center">
-			<a href="https://ctfd.io">
-				<small class="text-muted">Powered by CTFd</small>
+		<div class="container text-center" style="user-select:none">
+			<a href="http://210.30.97.133:8001/">
+				<small class="text-muted">Powered by SSSCTF</small>
 			</a>
 		</div>
 	</footer>
